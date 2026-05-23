@@ -103,7 +103,8 @@ g <- graph_from_adjacency_matrix(cor_mat, weighted = TRUE, mode = "undirected")
 
 ###### 
 ## Step 8 （本步骤用于辅助确定后续 multi-gene virtual knockout screening的候选扰动基因。）
-## 计算degree&betweenness，筛选top30 hub genes（作为候选vko基因）
+## 这里的 hub ranking 仅作为参考，不作为最终 vKO genes 的唯一自动筛选依据
+# 计算degree&betweenness，筛选top30 hub genes（作为候选vko基因）
 deg <- degree(g)
 btw <- betweenness(g, weights = 1/E(g)$weight)
 # 初步查看候选基因的网络中心性排序
