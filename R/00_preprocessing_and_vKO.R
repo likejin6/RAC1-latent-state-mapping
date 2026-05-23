@@ -102,18 +102,20 @@ diag(cor_mat) <- 0
 g <- graph_from_adjacency_matrix(cor_mat, weighted = TRUE, mode = "undirected")
 
 ###### 
-## Step 8
+## Step 8 （本步骤用于辅助确定后续 multi-gene virtual knockout screening的候选扰动基因。）
 ## 计算degree&betweenness，筛选top30 hub genes（作为候选vko基因）
 deg <- degree(g)
 btw <- betweenness(g, weights = 1/E(g)$weight)
+# 初步查看候选基因的网络中心性排序
 score <- deg + btw
-
+# 提取 top-ranked genes 作为后续人工筛选和生物学解释的参考集合
 hub_genes <- names(sort(score, decreasing = TRUE))[1:30]
-
 hub_genes
+
 ###### 
-## Step 8.5：对得到的top30 hub genes 进行人工生物学功能筛选
-# 筛选扰动可能性较高的基因
+## Step 8.5：进一步进行人工生物学功能筛选
+## 以下 genes 代表一组经过 network-informed prioritization和 biological relevance 综合选择后的 candidate perturbation targets，
+## 而不是由单一 hub score 完全自动筛选得到的 top genes。
 genes <- c("RAC1","LDHA","AREG","ANXA2","S100A6",
           "LPCAT1","TMSB10","TAGLN2","CTSD","PON2")
 
