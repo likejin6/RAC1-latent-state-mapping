@@ -100,7 +100,7 @@ expr_keep <- sapply(candidate_genes, function(g){
   mean(merged_df[[g]] > 1, na.rm = TRUE) > 0.3
 })
 filtered_genes <- candidate_genes[expr_keep]
-# 取Top20作为核心标签
+# 取Top20作为核心signature
 rac1_sig2 <- rac1_sig[rac1_sig$gene %in% filtered_genes, ]
 sig_genes <- head(rac1_sig2$gene, 20)
 
@@ -140,7 +140,7 @@ set.seed(123)
 cvfit <- cv.glmnet(x, y, family = "cox", alpha = 1, nfolds = 5, cox.ties = "breslow")
 
 pdf("Figure3A_LASSO.pdf", width = 7, height = 6)
-plot(cvfit)
+plot(cvfit,xlab = "Log(lambda)",ylab = "Partial likelihood deviance")
 dev.off()
 
 # 提取lambda.min对应的非零系数基因
