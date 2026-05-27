@@ -47,3 +47,24 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+
+
+# Raw data files
+GSE131907_UMI_matrix.rds
+GSE131907_annotation.txt.gz
+GSE131907_tumor_epithelial_5k.rds
+
+# Large scTenifoldKnk output objects
+*_vko.rds
+
+# R session files
+.Rhistory
+.RData
+.Rproj.user/
+
+# Temporary files
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
