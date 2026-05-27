@@ -10,4 +10,4 @@ Perturbation-informed latent tumor-state manifold, UCell program landscape, clus
 ## Figure 3
 TCGA-LUAD prognostic modeling using RAC1-responsive genes.
 
-Both PDF and PNG versions are provided for each figure. PDF files are used for report layout, while PNG files are used for GitHub preview and presentation.
+Both PDF and PNG versions are provided for each figure. 
