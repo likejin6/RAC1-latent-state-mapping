@@ -2,8 +2,6 @@
 
 This directory contains research portfolio materials for the RAC1-LUAD perturbation-informed tumor-state mapping project.
 
-These documents are intended for research communication, graduate program applications, advisor interviews, and project presentation. They are project reports and portfolio materials, not peer-reviewed publications.
-
 ## Files
 
  `1_page_Project_Brief_Likejin_RAC1_LUAD.pdf`                   One-page English project brief for quick project overview                             
