@@ -111,7 +111,7 @@ Files are available in:
 - `docs/`  
   Research project report and project brief.
 
-- `sessionInfo.txt`  
+- `environment/`  
   R session information used for the analysis.
 
 ---
