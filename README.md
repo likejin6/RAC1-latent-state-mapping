@@ -27,6 +27,14 @@ The central question is:
 > Can RAC1 virtual perturbation-derived regulatory rewiring genes be used to reconstruct and interpret latent tumor-state organization in LUAD?
 
 ---
+## Quick links
+
+- [One-page project brief](docs/1_page_Project_Brief_Likejin_RAC1_LUAD.pdf)
+- [Full English project report](docs/Li kejin_RAC1_LUAD_Perturbation_Mapping_Project Report.pdf)
+- [Main figures](figures/)
+- [Analysis scripts](R/)
+  
+---
 
 ## Workflow
 
