@@ -21,9 +21,9 @@ This project integrates:
 - perturbation-informed latent manifold reconstruction
 - UCell-based functional program scoring
 - TCGA-LUAD prognostic modeling
-
+- supplementary Python-based graph representation validation
+  
 The central question is:
-
 > Can RAC1 virtual perturbation-derived regulatory rewiring genes be used to reconstruct and interpret latent tumor-state organization in LUAD?
 
 ---
@@ -33,6 +33,7 @@ The central question is:
 - [Full English project report](docs/Project_Report_Likejin_RAC1_LUAD_Perturbation_Mapping.pdf)
 - [Main figures](figures/)
 - [Analysis scripts](R/)
+- [Supplementary Python graph validation](python_graph_validation/)
   
 ---
 
@@ -48,7 +49,8 @@ The central question is:
 8. Perturbation-informed latent manifold construction
 9. Functional program scoring and hybrid state annotation
 10. TCGA-LUAD prognostic relevance analysis
-
+11. Python-based graph representation validation of RAC1-responsive network-role shifts
+    
 ---
 
 ## Key findings
@@ -59,6 +61,7 @@ The central question is:
 - The latent manifold contained hybrid functional states, including alveolar-stress, oncogenic-plasticity, oncogenic-remodeling, epithelial-plasticity, plasticity-remodeling, and epithelial-remodeling states.
 - Functional program gradients suggested continuous organization across the RAC1-responsive latent state space.
 - An eight-gene RAC1-responsive prognostic signature retained prognostic relevance in the TCGA-LUAD cohort.
+- Supplementary Python graph analysis showed that RAC1-responsive DR genes exhibited larger topology, PCA graph embedding, and aligned node2vec embedding shifts between WT and RAC1-vKO GRN representation spaces.
 
 ---
 
@@ -97,12 +100,25 @@ Files are available in:
 - `figures/fig3/`
 - `results/results_figure3/`
 
+### Supplementary Python validation. Graph representation analysis of RAC1-induced GRN rewiring
+
+* Network topology shift comparison between RAC1-responsive DR genes and non-DR genes
+* Adjacency-vector PCA graph representation shift analysis
+* Aligned node2vec embedding shift validation
+
+Files are available in:
+
+- `python_graph_validation/figures/`
+- `python_graph_validation/results/`
 ---
 
 ## Repository structure
 
 - `R/`  
   R scripts for preprocessing, virtual knockout, GRN rewiring, latent manifold construction, and prognostic modeling.
+
+- `python_graph_validation/`  
+  Supplementary Python notebook, figures, and result tables for graph topology and graph representation validation based on scTenifoldKnk-derived WT/RAC1-vKO GRNs.
 
 - `data/`  
   Core processed input files and data description.
@@ -141,6 +157,16 @@ For a complete workflow, run:
 source("R/complete_analysis_pipeline.R")
 ```
 
+For supplementary Python graph validation, open and run:
+
+```text
+python_graph_validation/RAC1_graph_representation_validation.ipynb
+```
+
+This Python notebook uses WT and RAC1-vKO GRN adjacency matrices exported from the main R-based scTenifoldKnk workflow.
+
+The Python analysis is not an independent GRN inference workflow. Instead, it provides a secondary graph-based computational validation of RAC1-responsive network-role shifts using topology metrics, adjacency-vector PCA embedding, and aligned node2vec embedding.
+
 ---
 
 ## Data availability
@@ -175,13 +201,31 @@ These include:
 - prognostic model summary tables
 - marker-based functional program gene sets
 
+Additional Python graph validation materials are provided in:
+
+- `python_graph_validation/`
+
+This folder includes the Jupyter notebook, input GRN matrices, graph validation figures, node-level shift scores, statistical test summaries, and top-20 DR gene enrichment tables.
+
+The Python validation module re-analyzes scTenifoldKnk-derived WT and RAC1-vKO GRNs from a graph representation perspective.
+
 ---
 
 ## Environment
 
 The R session information used for this analysis is provided in:
 
-- `sessionInfo.txt`
+- `environment/sessionInfo.txt`
+
+The supplementary Python graph validation was implemented in Jupyter Notebook using:
+
+- `pandas`
+- `numpy`
+- `networkx`
+- `matplotlib`
+- `scikit-learn`
+- `scipy`
+- `node2vec`
 
 ---
 
@@ -191,7 +235,7 @@ This project is intended as a **computational biology research project report** 
 
 The main conceptual contribution is:
 
-> converting virtual perturbation-derived regulatory network response information into graph-informed features for latent tumor-state mapping.
+> converting virtual perturbation-derived regulatory network response information into perturbation-informed features for latent tumor-state mapping.
 
 ---
 
