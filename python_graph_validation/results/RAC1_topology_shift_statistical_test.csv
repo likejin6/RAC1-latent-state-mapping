@@ -1,0 +1,2 @@
+test,alternative,u_statistic,p_value,rank_biserial_correlation,n_DR_genes_excluding_RAC1,n_non_DR_genes
+Mann-Whitney U,DR genes > non-DR genes,18003.5,1.0966385220528591e-10,0.3673198146882357,99,266

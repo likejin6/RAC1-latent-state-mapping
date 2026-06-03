@@ -1,0 +1,2 @@
+top_n,top_DR_genes,top_non_DR_genes,background_total_genes_excluding_RAC1,background_DR_genes,background_non_DR_genes,background_DR_fraction,top_shifted_DR_fraction,fisher_odds_ratio,fisher_p_value,hypergeometric_p_value
+20,14,6,365,99,266,0.27123287671232876,0.7,7.137254901960785,4.743727024856817e-05,4.743727024856817e-05
