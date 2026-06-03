@@ -19,4 +19,8 @@ This folder contains supplementary tables supporting the RAC1 perturbation proje
 - Supplementary_Table_S5_program_gene_sets.csv  
   Marker-based functional program gene sets used for UCell scoring.
 
-Future extension may include Python-based network topology validation and node2vec graph embedding analysis.
+Python-based graph representation validation has been implemented as a separate supplementary module in:
+
+`python_graph_validation/`
+
+This module re-analyzes scTenifoldKnk-derived WT/RAC1-vKO GRNs using topology metrics, adjacency-vector PCA, and aligned node2vec embeddings.
