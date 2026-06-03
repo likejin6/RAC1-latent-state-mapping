@@ -12,3 +12,12 @@ Tables supporting the perturbation-informed latent manifold analysis, including 
 
 ## `results_figure3/`
 Tables supporting TCGA-LUAD prognostic modeling, including LASSO-selected genes, patient risk scores, Cox regression results, time-dependent ROC AUCs, and C-index results.
+
+
+## Supplementary Python graph validation results
+
+Additional result tables from the Python graph representation validation are provided in:
+
+- `python_graph_validation/results/`
+
+These include node-level topology shift scores, PCA embedding shift scores, aligned node2vec shift scores, Mann–Whitney U test summaries, top-20 shifted gene lists, and DR gene enrichment tests.
